@@ -32,7 +32,13 @@ class Sticks(db.Model):
     def __repr__(self):
         return f"<Stick stick_id= {self.stick_id} name = {self.name}>"
 
-class
+class Rating(db.Model):
+    __tablename__="ratings"
+
+    rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    score = db.Column(db.Integer)
+    stick_id = db.Column(db.Integer, db.ForeignKey("sticks.stick_id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
 
 if __name__ == "__main__":
     from server import app
