@@ -56,6 +56,24 @@ class Skates(db.Model):
     def __repr__(self):
         return f"<Skate skate_id= {self.skate_id} name = {self.name}>"
 
+class Gloves(db.Model):
+    __tablename__='gloves'
+
+    gloves_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    name = db.Column(db.String)
+    glove_path = db.Column(db.String)
+    price = db.Column(db.Integer)
+    brand = db.Column(db.String)
+
+    def __init__(self, name, glove_path, price, brand):
+        self.name = name
+        self.glove_path = glove_path
+        self.price = price
+        self.brand = brand 
+
+    def __repr__(self):
+        return f"<Glove glove_id= {self.glove_id} name = {self.name}>"
+
 
 class Rating(db.Model):
     __tablename__="ratings"
