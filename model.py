@@ -29,8 +29,33 @@ class Sticks(db.Model):
     price = db.Column(db.Integer)
     brand = db.Column(db.String)
 
+    def __init__(self, name, stick_path, price, brand):
+        self.name = name
+        self.stick_path = stick_path
+        self.price = price
+        self.brand = brand
+
     def __repr__(self):
         return f"<Stick stick_id= {self.stick_id} name = {self.name}>"
+
+class Skates(db.Model):
+    __tablename__='skates'
+
+    skates_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    name = db.Column(db.String)
+    skate_path = db.Column(db.String)
+    price = db.Column(db.Integer)
+    brand = db.Column(db.String)
+
+    def __init__(self, name, skate_path, price, brand):
+        self.name = name
+        self.skate_path = skate_path
+        self.price = price
+        self.brand = brand 
+
+    def __repr__(self):
+        return f"<Skate skate_id= {self.skate_id} name = {self.name}>"
+
 
 class Rating(db.Model):
     __tablename__="ratings"
