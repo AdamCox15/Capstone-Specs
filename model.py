@@ -54,7 +54,7 @@ class Skates(db.Model):
         self.brand = brand 
 
     def __repr__(self):
-        return f"<Skate skate_id= {self.skate_id} name = {self.name}>"
+        return f"<Skate skate_id= {self.skates_id} name = {self.name}>"
 
 class Gloves(db.Model):
     __tablename__='gloves'
@@ -72,7 +72,7 @@ class Gloves(db.Model):
         self.brand = brand 
 
     def __repr__(self):
-        return f"<Glove glove_id= {self.glove_id} name = {self.name}>"
+        return f"<Glove glove_id= {self.gloves_id} name = {self.name}>"
 
 
 class Rating(db.Model):
@@ -82,6 +82,16 @@ class Rating(db.Model):
     score = db.Column(db.Integer)
     stick_id = db.Column(db.Integer, db.ForeignKey("sticks.stick_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    skate_id = db.Column(db.Integer, db.ForeignKey("skates.skates_id"))
+    glove_id = db.Column(db.Integer, db.ForeignKey("gloves.gloves_id"))
+
+    stick = db.relationship("Sticks", backref = "ratings")
+    skate = db.relationship("Skates", backref = "ratings")
+    glove = db.relationship("Gloves", backref = "ratings")
+    user = db.relationship("User", backref = "ratings")
+
+    def __repr__(self):
+        return f"<Rating rating_id={self.rating_id} score={self.score}>"
 
 if __name__ == "__main__":
     from server import app
