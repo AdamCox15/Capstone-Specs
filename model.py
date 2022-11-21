@@ -20,14 +20,15 @@ class User(db.Model):
     email = db.Column(db.String, unique=True)
     password = db.Column(db.String)
 
-class Sticks(db.Model):
-    __tablename__='sticks'
+class Products(db.Model):
+    __tablename__='products'
 
-    stick_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    product_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     name = db.Column(db.String)
-    stick_path = db.Column(db.String)
-    price = db.Column(db.Integer)
+    product_path = db.Column(db.String)
+    price = db.Column(db.Float)
     brand = db.Column(db.String)
+    category = db.Column(db.string)
 
     def __init__(self, name, stick_path, price, brand):
         self.name = name
@@ -38,56 +39,16 @@ class Sticks(db.Model):
     def __repr__(self):
         return f"<Stick stick_id= {self.stick_id} name = {self.name}>"
 
-class Skates(db.Model):
-    __tablename__='skates'
-
-    skates_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    name = db.Column(db.String)
-    skate_path = db.Column(db.String)
-    price = db.Column(db.Integer)
-    brand = db.Column(db.String)
-
-    def __init__(self, name, skate_path, price, brand):
-        self.name = name
-        self.skate_path = skate_path
-        self.price = price
-        self.brand = brand 
-
-    def __repr__(self):
-        return f"<Skate skate_id= {self.skates_id} name = {self.name}>"
-
-class Gloves(db.Model):
-    __tablename__='gloves'
-
-    gloves_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    name = db.Column(db.String)
-    glove_path = db.Column(db.String)
-    price = db.Column(db.Integer)
-    brand = db.Column(db.String)
-
-    def __init__(self, name, glove_path, price, brand):
-        self.name = name
-        self.glove_path = glove_path
-        self.price = price
-        self.brand = brand 
-
-    def __repr__(self):
-        return f"<Glove glove_id= {self.gloves_id} name = {self.name}>"
-
 
 class Rating(db.Model):
     __tablename__="ratings"
 
     rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     score = db.Column(db.Integer)
-    stick_id = db.Column(db.Integer, db.ForeignKey("sticks.stick_id"))
+    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
-    skate_id = db.Column(db.Integer, db.ForeignKey("skates.skates_id"))
-    glove_id = db.Column(db.Integer, db.ForeignKey("gloves.gloves_id"))
 
-    stick = db.relationship("Sticks", backref = "ratings")
-    skate = db.relationship("Skates", backref = "ratings")
-    glove = db.relationship("Gloves", backref = "ratings")
+    product = db.relationship("Products", backref = "ratings")
     user = db.relationship("User", backref = "ratings")
 
     def __repr__(self):
