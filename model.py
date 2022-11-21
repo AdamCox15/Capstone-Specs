@@ -28,16 +28,17 @@ class Products(db.Model):
     product_path = db.Column(db.String)
     price = db.Column(db.Float)
     brand = db.Column(db.String)
-    category = db.Column(db.string)
+    category = db.Column(db.String)
 
-    def __init__(self, name, stick_path, price, brand):
+    def __init__(self, name, product_path, price, brand, category):
         self.name = name
-        self.stick_path = stick_path
+        self.product_path = product_path
         self.price = price
         self.brand = brand
+        self.category = category
 
     def __repr__(self):
-        return f"<Stick stick_id= {self.stick_id} name = {self.name}>"
+        return f"<Product product_id= {self.product_id} name = {self.name}>"
 
 
 class Rating(db.Model):
