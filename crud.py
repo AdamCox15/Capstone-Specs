@@ -25,6 +25,10 @@ def get_products():
 def get_product_by_id(product_id):
     return Products.query.get(product_id)
 
+
+def get_user_by_email(email):
+    return User.query.filter(User.email == email).first()
+
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)

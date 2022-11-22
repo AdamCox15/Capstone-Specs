@@ -1,8 +1,5 @@
-{% extends 'base.html' %} {% block title %}{{ movie.title }} - Details{%
+{% extends 'base.html' %} {% block title %}{{ product.name }} - Details{%
 endblock %} {% block body %}
 <h1>{{ product.name }}</h1>
-
-<p>{{ movie.overview }}</p>
-
-<img src="{{ movie.poster_path }}" />
+<img src="{{ product.product_path }}" />
 {% endblock %}
