@@ -8,8 +8,8 @@ import model
 import server
 
 
-os.system("dropdb hockey_shop")
-os.system("createdb hockey_shop")
+os.system("rm hockey_shop.db")
+
 
 model.connect_to_db(server.app)
 model.db.create_all()

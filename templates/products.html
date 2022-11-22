@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block title %}All Products{% endblock %} {% block
+body %} {% for product in products %}
+<h3>{{product.name}}</h3>
+<a href="/products/{{product.product_id}}">
+  <img src="{{product.product_path}}" alt="Stick" />
+</a>
+{% endfor %} {% endblock body %}

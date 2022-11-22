@@ -19,6 +19,11 @@ def create_rating(user, product, score):
 
     return rating
 
+def get_products():
+    return Products.query.all()
+
+def get_product_by_id(product_id):
+    return Products.query.get(product_id)
 
 if __name__ == '__main__':
     from server import app
