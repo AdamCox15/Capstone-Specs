@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% block title %}All Products{% endblock %} {% block
-body %} {% for product in products%}
+body %} 
+
+{% for product in products%}
+{% if product.category == "Sticks" %}
 <h3>{{product.name}}</h3>
 <a href="/products/{{product.product_id}}">
   <img src="{{product.product_path}}" alt="Stick" />
@@ -14,9 +17,11 @@ body %} {% for product in products%}
       >Add to Cart</a
     >
   </div>
+  {% endif %}
 {% endfor %} 
 
 {% for product in products%}
+{% if product.category == "Skates" %}
 <h3>{{product.name}}</h3>
 <a href="/products/{{product.product_id}}">
   <img src="{{product.product_path}}" alt="Stick" />
@@ -31,9 +36,11 @@ body %} {% for product in products%}
       >Add to Cart</a
     >
   </div>
+  {% endif %}
 {% endfor %} 
 
 {% for product in products%}
+{% if product.category == "Gloves" %}
 <h3>{{product.name}}</h3>
 <a href="/products/{{product.product_id}}">
   <img src="{{product.product_path}}" alt="Stick" />
@@ -48,6 +55,7 @@ body %} {% for product in products%}
       >Add to Cart</a
     >
   </div>
+  {% endif %}
 {% endfor %} 
 
 
