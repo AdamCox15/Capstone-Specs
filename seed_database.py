@@ -19,9 +19,9 @@ with open('data/products.json') as f:
 
 hockey_in_db = []
 for hockey in hockey_data:
-    name, product_path, price, brand, category = (
-        hockey["name"], hockey["product_path"], hockey["price"], hockey["brand"], hockey["category"])
-    db_hockey = crud.create_product(name, product_path, price, brand, category)
+    name, product_path, price, brand, category, info = (
+        hockey["name"], hockey["product_path"], hockey["price"], hockey["brand"], hockey["category"], hockey["info"])
+    db_hockey = crud.create_product(name, product_path, price, brand, category, info)
     hockey_in_db.append(db_hockey)
     print(hockey_in_db)
 model.db.session.add_all(hockey_in_db)

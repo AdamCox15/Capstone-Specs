@@ -7,9 +7,9 @@ def create_user(username, email, password):
 
     return user
 
-def create_product(name, product_path, price, brand, category):
+def create_product(name, product_path, price, brand, category, info):
 
-    product = Products(name = name, product_path=product_path, price=price, brand=brand, category=category)
+    product = Products(name = name, product_path=product_path, price=price, brand=brand, category=category, info=info)
 
     return product
 
@@ -24,6 +24,9 @@ def get_products():
 
 def get_product_by_id(product_id):
     return Products.query.get(product_id)
+
+def get_product_by_category(category):
+    return Products.query.filter_by(category).all()
 
 
 def get_user_by_email(email):

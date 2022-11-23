@@ -38,13 +38,15 @@ class Products(db.Model):
     price = db.Column(db.Float)
     brand = db.Column(db.String)
     category = db.Column(db.String)
+    info = db.Column(db.String)
 
-    def __init__(self, name, product_path, price, brand, category):
+    def __init__(self, name, product_path, price, brand, category, info):
         self.name = name
         self.product_path = product_path
         self.price = price
         self.brand = brand
         self.category = category
+        self.info = info
 
     def __repr__(self):
         return f"<Product product_id= {self.product_id} name = {self.name}>"

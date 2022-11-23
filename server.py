@@ -24,8 +24,11 @@ def create_account_page():
 @app.route('/products')
 def all_products():
     products = crud.get_products()
+    # sticks = crud.get_product_by_category("Sticks")
+
 
     return render_template('products.html', products= products)
+
 
 @app.route('/products/<product_id>')
 def show_product(product_id):
@@ -118,4 +121,4 @@ def empty_cart():
 
 if __name__ == "__main__":
     connect_to_db(app)
-    app.run(port="5460", debug=True)
+    app.run(port="5000", debug=True)

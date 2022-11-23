@@ -4,7 +4,25 @@
     "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-super-tacks-team-hockey-stick.jpg",
     "price": 129.99,
     "brand": "CCM",
-    "category": "Sticks"
-  }
+    "category": "Sticks",
+    "info": "CCM Super Tacks AS1 Hockey Stick features a speared one-piece construction with Sigmatex carbon fiber to help provide a great feel for the puck and a more effective transfer of energy throughout each play made. X-Flow technology used in the manufacturing process provides a greater strength-to-weight ratio using less resin and more carbon fiber. Rounded Corners & Straight sidewall geometry. The flex profile offers a mid-kick point, an extra stiff hosel and a softened upper shaft allow the stick to store and release more power during your plays. The Mid-Kick affords greater stability and control, and is ideal for players looking for reliability during all types of play. Tacky grip coating. ACU3™ BladeCore helps improve consistency & durability in your play, and its strategically stiff outer frame and two support bridges help afford greater accuracy. Sigmatex Carbon Fiber on the blade."
+  },
+
+{
+  "name": "Vapor S21",
+  "product_path": "https://cdn.shopify.com/s/files/1/0552/3217/products/ecc41ece3f83ddf656a8b2fe37631da82885af26_1024x1024.jpg?v=1624592897",
+  "price": 449.99,
+  "brand": "Bauer",
+  "category": "Skates",
+  "info": "An exclusive offering in the 2021 Vapor family, the Shift Pro Skate represents a great value for the competitive player. Slotting in between the Vapor 3X Pro and 3X models, this skate feature's Bauer's CURV composite that provides elite levels of support and durability. The Shift Pro Skate also integrates some top new technologies from Bauer's Hyperlite and 3X Pro skates, such as the HydroLite liner and new asymmetrical toe cap design. Bauer's 3D fit system allows players of all foot types to find their match in a Vapor skate built for agility and acceleration."
+},
+{
+  "name": "Tacks AS-V",
+  "product_path": "https://cdn.shopify.com/s/files/1/1973/6723/products/CCM-TACKS-AS-V-HOCKEY-GLOVES_1024x1024.jpg?v=1652453638",
+  "price": 199.99,
+  "brand": "CCM",
+  "category": "Gloves",
+  "info":"Elite-level protection in a highly mobile and roomy design to keep your hands comfortable and ready for whatever the game brings. Soft and comfortable foam with enhanced antibacterial and odor fighting treatments to help keep your gloves feeling fresh. Elite-level protection construction that allows for great freedom of movement, great dexterity and durability. Elite-Level impact protection + ventilated base allows for better air flow helping your hands stay cool and protected while showing off a pro-inspired look. 2-piece flexible thumb delivers better mobility and an incredible grip on your stick. Pro-feel AX Suede palm with highly resistant Kevlar reinforcement, plus antibacterial and odor-fighting treatments to increase durability and freshness. Shorter open anatomical cuff allows for great freedom of movement while staying protected. SUBLIMATED LINER INSIDE CUFF: Superior quality liner that feels great from start to finish."
+}
 
 ]
