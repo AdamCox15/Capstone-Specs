@@ -1,9 +1,9 @@
 from model import db, User, Products, Rating, connect_to_db
 
 
-def create_user(email, password):
+def create_user(username, email, password):
 
-    user = User(email = email, password = password)
+    user = User(username, email, password)
 
     return user
 

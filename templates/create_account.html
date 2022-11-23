@@ -1,8 +1,8 @@
 {% extends 'base.html' %} {%block body %}
 <div class="create-acc">
   <section>
-    <h2>Log In</h2>
-    <form class="p-3" action="/login" method="POST">
+    <h2>Create an Account</h2>
+    <form class="p-3" action="/users" method="POST">
       <div class="mb-3 form-floating">
         <input
           class="form-control"
@@ -12,7 +12,20 @@
           id="emailInput"
         />
 
-        <label class="form-label words" for="emailInput">Enter Email</label>
+        <label class="form-label words" for="usernameInput">Enter Email</label>
+      </div>
+      <div class="mb-3 form-floating">
+        <input
+          class="form-control"
+          type="text"
+          name="username"
+          placeholder="Enter Username"
+          id="usernameInput"
+        />
+
+        <label class="form-label words" for="usernameInput"
+          >Enter Username</label
+        >
       </div>
       <div class="mb-3 form-floating">
         <input
@@ -27,11 +40,10 @@
           >Enter Password</label
         >
       </div>
-
       <p>
         <input class="btn btn-dark" type="submit" />
       </p>
     </form>
-    {% endblock %}
   </section>
 </div>
+{% endblock %}

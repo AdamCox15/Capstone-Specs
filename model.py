@@ -17,8 +17,17 @@ class User(db.Model):
     __tablename__= "users"
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    username = db.Column(db.Integer, unique=True)
     email = db.Column(db.String, unique=True)
     password = db.Column(db.String)
+
+    def __init__(self, username, email, password):
+        self.username = username
+        self.email = email
+        self.password = password
+
+    def __repr__(self):
+        return f'<User user_id={self.user_id} email={self.email}>'
 
 class Products(db.Model):
     __tablename__='products'

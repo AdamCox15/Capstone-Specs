@@ -46,16 +46,36 @@ def register_user():
             "Account with that email already exists. Please log in or try a different email")
         return redirect('/create_account')
     else:
-        user = crud.create_user(email, password)
+        user = crud.create_user(username, email, password)
         db.session.add(user)
         db.session.commit()
         flash("Account created! Please log in.")
     return redirect('/login')
 
+@app.route("/login", methods=['POST'])
+def login():
+    email = request.form.get('email')
+    password = request.form.get('password')
+    user = crud.get_user_by_email(email)
+
+    if not user or user.password != password:
+        flash("The email or password you entered was incorrect")
+    else:
+        session['user_email'] = user.email
+        flash(f"Welcome Back, {user.username}!")
+    return redirect("/")
+
+@app.route("/logout")
+def logout():
+    del session['user_email']
+    session["cart"] = {}
+    flash("You're logged out")
+    return redirect("/")
 
 @app.route('/cart')
 def cartPage():
     if 'user_email' not in session:
+        flash("To view cart please login!")
         return redirect('/login')
     order_total = 0
     cart_products = []
@@ -74,6 +94,7 @@ def cartPage():
     return render_template("cart.html", cart_products=cart_products, order_total=order_total)
 
 
+
 @app.route('/add_to_cart/<product_id>')
 def add_to_cart(product_id):
     if 'user_email' not in session:
@@ -88,6 +109,13 @@ def add_to_cart(product_id):
 
     return redirect("/cart")
 
+
+@app.route("/empty-cart")
+def empty_cart():
+    session["cart"] = {}
+
+    return redirect("/cart")
+
 if __name__ == "__main__":
     connect_to_db(app)
-    app.run(port="5430", debug=True)
+    app.run(port="5460", debug=True)

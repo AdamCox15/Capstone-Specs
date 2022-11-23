@@ -4,4 +4,13 @@ body %} {% for product in products %}
 <a href="/products/{{product.product_id}}">
   <img src="{{product.product_path}}" alt="Stick" />
 </a>
+</div>
+<div class="price_cart">
+    <h2>${{product.price}}.00</h2>
+    <a
+      class="btn btn-primary"
+      href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
+      >Add to Cart</a
+    >
+  </div>
 {% endfor %} {% endblock body %}
