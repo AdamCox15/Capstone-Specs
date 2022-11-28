@@ -165,7 +165,86 @@
 "brand": "Bauer",
 "category": "Skates",
 "info": "An exclusive offering in the 2021 Vapor family, the Shift Pro Skate represents a great value for the competitive player. Slotting in between the Vapor 3X Pro and 3X models, this skate feature's Bauer's CURV composite that provides elite levels of support and durability. The Shift Pro Skate also integrates some top new technologies from Bauer's Hyperlite and 3X Pro skates, such as the HydroLite liner and new asymmetrical toe cap design. Bauer's 3D fit system allows players of all foot types to find their match in a Vapor skate built for agility and acceleration."
+},
+{
+  "name": "SlingTech 2.0",
+  "product_path": "https://cdn.shopify.com/s/files/1/0552/3217/products/Sling-1_8ff13814-2954-4051-b18e-a127ac92ae4c_460x@2x.jpg?v=1635972552",
+  "price": 209.99,
+  "brand": "Bauer",
+  "category": "Sticks",
+  "info": "Bauer's new Sling stick builds off the incredible success of last year's Nexus ADV series and showcases Bauer's newest technology to create a new level of performance. Coming in at just 375 grams, the Sling stick uses ER Spine technology to not only remove weight but also create a more durable shaft with an even more effortless release. The blade features Bauer's updated new Sling2.0 technology, which combines a shorter slot size with thinner carbon layers and a new reinforced bridge core to create an optimized slingshot effect (10% faster release than the Nexus ADV) and even greater durability (15% stronger than the Nexus ADV)."
+  },
+  {
+    "name": "Supreme ADV ",
+    "product_path": "https://www.hockeyworld.com/common/images/products/large/BAUER-Supreme-Advanced-Series-Grip-Stick-Int.jpg",
+    "price": 249.99,
+    "brand": "Bauer",
+    "category": "Sticks",
+    "info": "Are you ready for the next generation of SUPREME? Three years of development and 2,000 hours of on-ice testing and collaboration with the game's best players has re-defined SUPREME performance. The lightest, fastest and easiest SUPREME stick to ever hit the ice will create a level of confidence that can't be stopped."
+    },
+    {
+      "name": "Jetspeed FT5 Pro",
+      "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+      "price": 149.99,
+      "brand": "CCM",
+      "category": "Sticks",
+      "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+      },
+      {
+        "name": "Jetspeed FT5 Pro",
+        "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+        "price": 149.99,
+        "brand": "CCM",
+        "category": "Sticks",
+        "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+        },
 
-}
-
+        {
+          "name": "Jetspeed FT5 Pro",
+          "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+          "price": 149.99,
+          "brand": "CCM",
+          "category": "Sticks",
+          "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+          },
+          {
+            "name": "Jetspeed FT5 Pro",
+            "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+            "price": 149.99,
+            "brand": "CCM",
+            "category": "Sticks",
+            "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+            },
+            {
+              "name": "Jetspeed FT5 Pro",
+              "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+              "price": 149.99,
+              "brand": "CCM",
+              "category": "Sticks",
+              "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+              },
+              {
+                "name": "Jetspeed FT5 Pro",
+                "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+                "price": 149.99,
+                "brand": "CCM",
+                "category": "Sticks",
+                "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+                },
+                {
+                  "name": "Jetspeed FT5 Pro",
+                  "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+                  "price": 149.99,
+                  "brand": "CCM",
+                  "category": "Sticks",
+                  "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+                  },
+                  {
+                    "name": "Jetspeed FT5 Pro",
+                    "product_path": "https://www.hockeyworld.com/common/images/products/large/ccm-jetspeed-ft5-pro-blue-hockey-stick.jpg",
+                    "price": 149.99,
+                    "brand": "CCM",
+                    "category": "Sticks",
+                    "info": "The CCM Jetpeed FT5 Pro Hockey Stick- Sr features all NEW Sigma STP Carbon shaft and blade improving on previous generation's durability and strength, all while allowing for a lighter and better balanced stick than ever. Created for players with a shoot-first mentality, the Jetspeed hybrid kickpoint helps generate a hinge effect for a perfect balance between shot speed and response. Nanolite High-Performance Carbon Layering further enhances the stick's lightness, feel, and durability. SMU Blue color."
+                    }
 ]
