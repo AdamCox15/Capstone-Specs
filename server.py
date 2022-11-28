@@ -36,10 +36,41 @@ def all_products():
 
 @app.route('/products/<product_id>')
 def show_product(product_id):
-
     product = crud.get_product_by_id(product_id)
+    rating = crud.get_rating_by_product_id(product_id)
+    total = 0
 
-    return render_template('product_details.html', product = product)
+    for r in rating:
+        total = total + r.score
+    if len(rating) != 0:
+        avg = total/len(rating)
+    else:
+        avg = -1
+
+
+    return render_template('product_details.html', product = product, rating = rating, avg = avg)
+
+@ app.route("/products/<product_id>/rating", methods=["POST"])
+def create_rating(product_id):
+
+    logged_in_email = session.get("user_email")
+    rating_score = request.form.get("rating")
+
+    if logged_in_email is None:
+        flash("You must log in to rate a product.")
+    elif not rating_score:
+        flash("Error: you didn't select a score for your rating.")
+    else:
+        user = crud.get_user_by_email(logged_in_email)
+        product = crud.get_product_by_id(product_id)
+
+        rating = crud.create_rating(user, product, int(rating_score))
+        db.session.add(rating)
+        db.session.commit()
+
+        flash(f"You rated this product {rating_score} out of 5.")
+
+    return redirect(f"/products/{product_id}")
 
 @app.route("/users", methods=["POST"])
 def register_user():
@@ -125,4 +156,4 @@ def empty_cart():
 
 if __name__ == "__main__":
     connect_to_db(app)
-    app.run(port="5000", debug=True)
+    app.run(port="5200", debug=True)

@@ -1,13 +1,35 @@
-{% extends 'base.html' %} {% block title %}{{ product.name }} - Details{%
-endblock %} {% block body %}
-<h1>{{ product.name }}</h1>
-<img src="{{ product.product_path }}" />
-<div class="price_cart">
-  <h2>${{product.price}}.00</h2>
-  <a
-    class="btn btn-primary"
-    href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
-    >Add to Cart</a
-  >
-</div>
-{% endblock %}
+{% extends 'base.html' %} {% block body%}
+<header class="container-fluid"><h1>{{ product.name }}</h1></header>
+<section class="product_info">
+  <img src="{{ product.product_path }}" />
+  <div class="price_cart">
+    <h2>${{product.price}}.00</h2>
+    <a
+      class="btn btn-primary"
+      href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
+      >Add to Cart</a
+    >
+  </div>
+  {{product.info}}
+</section>
+{%if avg >= 0%}
+<h2>Average Rating:</h2>
+<h2>{{"%0.1f" | format(avg)}}</h2>
+{%else%}
+<h2>No Ratings Yet</h2>
+{%endif%} {% if session.get('user_email') %}
+  <h2>How would you rate this Stick?</h2>
+  <form action="/products/{{ product.product_id }}/rating" method="POST">
+    <p>
+      Rating:
+      <select name="rating">
+        <option value="">Select rating</option>
+        {% for num in range(6) %}
+        <option value="{{ num }}">{{ num }}</option>
+        {% endfor %}
+      </select>
+    </p>
+    <p><input type="submit" /></p>
+  </form>
+</section>
+{% endif %} {% endblock %}

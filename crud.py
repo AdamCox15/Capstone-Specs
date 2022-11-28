@@ -19,6 +19,9 @@ def create_rating(user, product, score):
 
     return rating
 
+def get_rating_by_product_id(product_id):
+    return Rating.query.filter_by(product_id=product_id).all()
+
 def get_products():
     return Products.query.all()
 
