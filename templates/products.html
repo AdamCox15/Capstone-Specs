@@ -1,62 +1,55 @@
 {% extends 'base.html' %} {% block title %}All Products{% endblock %} {% block
-body %} 
+body %}
+<div class="main1">
+      {% for product in products%} {% if product.category == "Sticks"%}
+      <div class="proDiv">
+        <h3>{{product.name}}</h3>
+        <a href="/products/{{product.product_id}}">
+          <img id="smPic" src="{{product.product_path}}" alt="Stick" />
+        </a>
+        <h2>${{product.price}}</h2>
+        <a
+          class="btn btn-primary"
+          href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
+          >Add to Cart</a>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+    <div class="main2">
+      {% for product in products%} {% if product.category == "Skates" %}
+      <div class="proDiv">
+        <h3>{{product.name}}</h3>
+        <a href="/products/{{product.product_id}}">
+          <img id="smPic" src="{{product.product_path}}" alt="Stick" />
+        </a>
+        <h2>${{product.price}}</h2>
+        <p></p>
+        <a
+          class="btn btn-primary"
+          href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
+          >Add to Cart</a
+        >
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+    <div class="main3">
+      {% for product in products%} {% if product.category == "Gloves" %}
+      <div class="proDiv">
+        <h3>{{product.name}}</h3>
+        <a href="/products/{{product.product_id}}">
+          <img id="smPic" src="{{product.product_path}}" alt="Stick" />
+        </a>
+        <h2>${{product.price}}</h2>
+        <p></p>
+        <a
+          class="btn btn-primary"
+          href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
+          >Add to Cart</a
+        >
+      </div>
+      {% endif %} {% endfor %}
+    </div>
 
-{% for product in products%}
-{% if product.category == "Sticks" %}
-<h3>{{product.name}}</h3>
-<a href="/products/{{product.product_id}}">
-  <img src="{{product.product_path}}" alt="Stick" />
-</a>
-</div>
-<div class="price_cart">
-    <h2>${{product.price}}.00</h2>
-    <p></p>
-    <a
-      class="btn btn-primary"
-      href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
-      >Add to Cart</a
-    >
+    {% endblock body %}
   </div>
-  {% endif %}
-{% endfor %} 
-
-{% for product in products%}
-{% if product.category == "Skates" %}
-<h3>{{product.name}}</h3>
-<a href="/products/{{product.product_id}}">
-  <img src="{{product.product_path}}" alt="Stick" />
-</a>
 </div>
-<div class="price_cart">
-    <h2>${{product.price}}.00</h2>
-    <p></p>
-    <a
-      class="btn btn-primary"
-      href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
-      >Add to Cart</a
-    >
-  </div>
-  {% endif %}
-{% endfor %} 
-
-{% for product in products%}
-{% if product.category == "Gloves" %}
-<h3>{{product.name}}</h3>
-<a href="/products/{{product.product_id}}">
-  <img src="{{product.product_path}}" alt="Stick" />
-</a>
-</div>
-<div class="price_cart">
-    <h2>${{product.price}}.00</h2>
-    <p></p>
-    <a
-      class="btn btn-primary"
-      href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
-      >Add to Cart</a
-    >
-  </div>
-  {% endif %}
-{% endfor %} 
-
-
-{% endblock body %}
