@@ -38,13 +38,16 @@ body{
     transition-duration: 2s;
 }
 .proDiv{
-margin: 30px 15px;
+margin: 30px 20px;
 text-align: center;
+border: 3px solid black;
+background-color: aquamarine;
+padding: 10px;
 }
 .testimonials{
     position: absolute;
-    margin: 20px;
-    margin-top: 120px;
+    margin-bottom: 80px;
+    margin-top: 240px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -54,6 +57,7 @@ text-align: center;
 #footer{
     margin-top: auto;
     text-align: center;
+    padding-top: 190px;
 }
 .new{
     padding-left: 100px;
@@ -86,3 +90,13 @@ h2{
     padding: 10px 10px;
     margin: 10px;
 }
+#fix{
+    height: 500px;
+}
+/* #proH {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: darkturquoise;
+} */

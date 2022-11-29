@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block title %}All Products{% endblock %} {% block
 body %}
 <div class="main1">
+  <h2 id="proH">Sticks</h2>
       {% for product in products%} {% if product.category == "Sticks"%}
       <div class="proDiv">
         <h3>{{product.name}}</h3>
@@ -15,6 +16,7 @@ body %}
       </div>
       {% endif %} {% endfor %}
     </div>
+    <h2 id="proH">Skates</h2>
     <div class="main2">
       {% for product in products%} {% if product.category == "Skates" %}
       <div class="proDiv">
@@ -32,6 +34,7 @@ body %}
       </div>
       {% endif %} {% endfor %}
     </div>
+    <h2 id="proH">Gloves</h2>
     <div class="main3">
       {% for product in products%} {% if product.category == "Gloves" %}
       <div class="proDiv">
