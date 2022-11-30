@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block body%}
-<header class="container-fluid"><h1>{{ product.name }}</h1></header>
+<header class="container-fluid"><h1 class="indH">{{ product.name }}</h1></header>
 <section class="product_info">
   <img id="lgPic" src="{{ product.product_path }}" />
   <div class="price_cart">
-    <h2>${{product.price}}.00</h2>
+    <h2>${{product.price}}</h2>
     <a
       class="btn btn-primary"
       href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
