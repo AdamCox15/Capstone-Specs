@@ -58,7 +58,7 @@ padding: 10px;
 #footer{
     margin-top: auto;
     text-align: center;
-    padding-top: 190px;
+    padding-top: 100px;
 }
 .new{
     padding-left: 100px;
@@ -104,4 +104,10 @@ h2{
     margin: auto;
     height: 400px;
     width: 400px;
+}
+.rate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
