@@ -5,7 +5,7 @@
   <div class="price_cart">
     <h2>${{product.price}}</h2>
     <a
-      class="btn btn-primary"
+      class="btn btn-primary cartBtn"
       href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
       >Add to Cart</a
     >
@@ -34,4 +34,11 @@
     </div>
   </form>
 </section>
-{% endif %} {% endblock %}
+{% endif %} 
+<img
+  class="logo1"
+  src="../static/Hcokey_Logo_2-removebg-preview.png"
+  alt="Rink Rats"
+/>
+
+{% endblock %}

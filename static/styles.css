@@ -5,9 +5,14 @@ body{
     background-color: #ADCCD9;
 }
 .logo{
-    height: 120px;
-    width: 120px;
+    height: 180px;
+    width: 180px;
     padding-right: 10px;
+}
+.logo1{
+    height: 200px;
+    width: 200px;
+    margin: auto;
 }
 .main1{
     background-color: #ADCCD9;
@@ -97,6 +102,7 @@ h4 {
 h2{
     text-align: center;
     margin-top: 60px;
+    margin-bottom: 15px;
 }
 .links{
     display: flex;
@@ -108,7 +114,7 @@ h2{
     padding: 30px;
 }
 #fix{
-    height: 750px;
+    height: 550px;
 }
 .indH{
     text-align: center;
@@ -139,4 +145,17 @@ hr{
     color: #012340;
     border: #012340 solid 1px;
     margin-top: 10px;
+}
+.btn{
+    width: 120px !important;
+    margin-bottom: 15px !important;
+}
+.cartBtn{
+    margin: auto !important;
+}
+.product_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }
