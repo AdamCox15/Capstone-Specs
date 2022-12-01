@@ -156,4 +156,4 @@ def empty_cart():
 
 if __name__ == "__main__":
     connect_to_db(app)
-    app.run(port="5120", debug=True)
+    app.run(port="5100", debug=True)
