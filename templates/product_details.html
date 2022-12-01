@@ -5,12 +5,14 @@
   <div class="price_cart">
     <h2>${{product.price}}</h2>
     <a
-      class="btn btn-primary cartBtn"
+      class="btn btn-primary cartBtn1"
       href="{{ url_for('add_to_cart', product_id=product.product_id) }}"
       >Add to Cart</a
     >
   </div>
+  <div id="info1">
   {{product.info}}
+  </div>
 </section>
 {%if avg >= 0%}
 <h2>Average Rating:</h2>
@@ -18,7 +20,7 @@
 {%else%}
 <h2>No Ratings Yet</h2>
 {%endif%} {% if session.get('user_email') %}
-  <h2>How would you rate this Stick?</h2>
+  <h2>How would you rate this product?</h2>
   <form action="/products/{{ product.product_id }}/rating" method="POST">
     <div class="rate">
     <p>
