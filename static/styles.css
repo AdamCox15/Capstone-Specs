@@ -41,7 +41,7 @@ body{
     width: 220px;
     margin: 30px;
     border: 4px solid black;
-    box-shadow: 3px 3px #49728C;
+    box-shadow: 4px 4px #49728C;
 }
 #smPic:hover{
     height: 300px;
@@ -60,6 +60,7 @@ font-family: 'Cormorant SC', serif;
     position: absolute;
     margin-bottom: 80px;
     margin-top: 400px;
+    padding-bottom: 15px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -67,6 +68,8 @@ font-family: 'Cormorant SC', serif;
     padding: 30px 40px;
     background-color: #6A8FA6;
     font-family: 'Cormorant SC', serif;
+    border: 2px solid black;
+    box-shadow: 4px 4px #49728C
 }
 #footer{
     margin-top: auto;
@@ -114,9 +117,13 @@ h4 {
 }
 h2{
     text-align: center;
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: 15px;
     font-family: 'Cormorant SC', serif;
+}
+#test{
+    margin-top: 60px;
+    text-decoration: underline;
 }
 .links{
     display: flex;
